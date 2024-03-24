@@ -46,8 +46,8 @@ app.use(async (c, next) => {
 // export const runtime = 'edge'
 
 app.frame('/', fdk.analyticsMiddleware({
-  frameId: '2822',
-  customId: 'my-custom-id',
+  frameId: 'far-conversations-frame',
+  customId: 'far-conversations',
 }), (c) => {
   const {status} = c
   // console.log("--------Currently on / url---------")

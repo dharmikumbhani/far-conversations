@@ -5,7 +5,7 @@ export default async function getExtendedNetwork(fid:number) {
       const response = await axios.post(
         'https://graph.cast.k3l.io/scores/personalized/following/fids',
         [
-          1
+          fid
         ],
         {
           params: {
