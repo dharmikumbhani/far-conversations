@@ -9,7 +9,6 @@ import { serveStatic } from 'frog/serve-static'
 import getExtendedNetwork from '@/app/lib/openrank'
 import { createOrFindEmbeddedWalletForFid } from '@/app/lib/privy'
 import {getAllCastsOfUser, getAllFollowersOfFID, getAllFollowingOfFID, getUserInformation} from '@/app/lib/pinata'
-import { fetchAllFollowers, fetchAllFollowing } from '@/app/lib/neynar'
 import { getAIResponse } from '@/app/lib/gptAI'
 
 const app = new Frog({

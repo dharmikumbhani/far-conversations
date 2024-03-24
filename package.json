@@ -10,7 +10,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@neynar/nodejs-sdk": "^1.13.1",
     "axios": "^1.6.8",
     "frog": "latest",
     "hono": "^4",
