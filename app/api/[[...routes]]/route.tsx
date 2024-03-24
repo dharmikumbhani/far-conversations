@@ -10,11 +10,13 @@ import getExtendedNetwork from '@/app/lib/openrank'
 import { createOrFindEmbeddedWalletForFid } from '@/app/lib/privy'
 import {getAllCastsOfUser, getAllFollowersOfFID, getAllFollowingOfFID, getUserInformation} from '@/app/lib/pinata'
 import { getAIResponse } from '@/app/lib/gptAI'
+import { pinata } from 'frog/hubs'
 
 const app = new Frog({
   assetsPath: '/',
   basePath: '/api',
   // Supply a Hub to enable frame verification.
+  hub: pinata()
   // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
 })
 
