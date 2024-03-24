@@ -99,7 +99,7 @@ app.frame('/find', neynarMiddleware, (c) => {
     ),
     intents: [
       // <Button action='/enter-username' value="enter-username">Enter Username</Button>,
-      <Button action='/someone' value="find-someone">Find Someone</Button>,
+      <Button action='/someone' value="find-someone">Find Someone in Extd Network</Button>,
     ],
   })
 })
@@ -195,7 +195,7 @@ app.frame('/farconversation', async (c) => {
       const extractedContents = filteredCasts.map((cast: { content: any }) => ({content: cast.content,}))
       const combinedContent: String = extractedContents.map((obj: { content: any }) => obj.content).join(', ');
       console.log(combinedContent)
-      const promptText = `Here is a bio for someone along with everything that this person is talking about lately seperated by commas: ${combinedContent}. Please elp me with a object in response which has 2 key value properties. The first one is what are the likes of ${displayNameSomeone} and second key value is, what a good conversational starter with ${displayNameSomeone} would be, based on everything that you have consumed in terms of content`
+      const promptText = `For the following content put out by an individual, generate a good first conversational starter`
       const aiResponse = await getAIResponse(promptText);
       console.log(aiResponse)
       // aiResponse.likesOfSomeone
@@ -231,7 +231,7 @@ app.frame('/farconversation', async (c) => {
     ),
     intents: [
       <Button.Reset>Reset</Button.Reset>,
-      <Button action='/farconversation' value="farconversation">Cast Message</Button>,
+      // <Button action='/farconversation' value="farconversation">Cast Message</Button>,
       <Button.Link href={urlSomeone}>{usernameSomeone}</Button.Link>,
     ],
   })
