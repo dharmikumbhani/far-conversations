@@ -9,7 +9,7 @@ export default async function getExtendedNetwork(fid:number) {
         ],
         {
           params: {
-            'k': '3',
+            'k': '2',
             'limit': '100'
           },
           headers: {

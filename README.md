@@ -1,4 +1,5 @@
 ```
+![FarConversations](https://github.com/dharmikumbhani/far-conversations/blob/main/public/FarConversations-GetStarted.png)
 npm install
 npm run dev
 ```
